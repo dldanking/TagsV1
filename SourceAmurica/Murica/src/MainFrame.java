@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import proto.Task;
 public class MainFrame extends Application{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -19,8 +20,8 @@ public class MainFrame extends Application{
 	}
 	@Override
 	public void start(Stage primaryStage){
-		CheckToggle check = new CheckToggle();
-		
+		ToggleButton check = new ToggleButton();
+		check.getStyleClass().add("custom");
 		CheckBox c1 = new CheckBox();
 		CheckBox c2 = new CheckBox();
 		CheckBox c3 = new CheckBox();
@@ -35,15 +36,11 @@ public class MainFrame extends Application{
 		root.setHgap(10);
 		root.setVgap(10);
 		root.setPadding(new Insets(25, 25, 25, 25));
-		root.add(c1,0,0);
-		root.add(t1,1,0);
-		root.add(c2,0,1);
-		root.add(t2,1,1);
-		root.add(c3,0,2);
-		root.add(t3,1,2);
-		root.add(check,1, 3);
+		root.add(new Task("Woast Witvik"), 0, 0);
+		root.add(new Task("Gencide the Weebs"), 0, 1);
+		root.add(new Task("Woast Rotvok"), 0, 2);
         Scene scene =new Scene(root, 300, 250);
-        //scene.getStylesheets().add(this.getClass().getResource("MainFrame.css").toExternalForm());
+        scene.getStylesheets().add("MainStyle.css");
 		primaryStage.setScene(scene);
         primaryStage.show();
 	}

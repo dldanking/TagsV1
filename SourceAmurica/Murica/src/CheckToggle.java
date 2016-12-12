@@ -5,13 +5,14 @@ import javafx.scene.control.ToggleButton;
 
 public class CheckToggle extends ToggleButton {
 	public CheckToggle(){
+		this.setStyle(" -fx-graphic: url(file:src/white.jpg)");
 		this.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent arg0) {
 				if(isSelected()){
-					setStyle(" -fx-graphic: url(file://PV152-DATA//STUHOME//326469//documents//SourceAmurica//Murica//src//check2.gif)");
+					setStyle(" -fx-graphic: url(file:src/check2.gif)");
 				}else{
-					setStyle(" -fx-graphic: url(file://PV152-DATA//STUHOME//326469//documents//SourceAmurica//Murica//src//white.jpg)");
+					setStyle(" -fx-graphic: url(file:src/white.jpg)");
 				}
 				
 			}
@@ -20,3 +21,4 @@ public class CheckToggle extends ToggleButton {
         });
 	}
 }
+
